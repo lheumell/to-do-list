@@ -7,7 +7,13 @@ export class Todo extends Document {
   title: string;
 
   @Prop()
-  done: boolean;
+  description: string;
+
+  @Prop()
+  status: 'todo' | 'in-progress' | 'done';
+
+  @Prop({ default: 'medium' })
+  priority: 'low' | 'medium' | 'high';
 }
 
 export const TodoSchema = SchemaFactory.createForClass(Todo);
