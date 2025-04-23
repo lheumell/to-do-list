@@ -40,9 +40,8 @@
 
 <script setup lang="ts">
 import { computed, reactive } from 'vue';
-import { TFormType, TTodo } from '../types/todo';
+import { TFormType, TTodo } from '@/types/todo';
 
-const labelButton = computed(() => props.todo ? 'edit' : 'create');
 
 const props = defineProps<{
     todo?: TTodo
@@ -52,21 +51,21 @@ const emit = defineEmits<{
     (e: 'submit', form: TFormType): void;
 }>();
 
+const labelButton = computed(() => props.todo ? 'edit' : 'create');
 
 
-const form: TFormType = reactive(props.todo || {
+const form: TFormType = reactive({
     title: '',
     description: '',
     status: 'todo',
     priority: 'medium',
+    ...props.todo,
 });
-
 
 
 const emitSubmit = () => {
     emit('submit', form);
 };
-
 
 </script>
 

@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import { TTodo } from '../../types/todo'
+import { TTodo } from '@/types/todo'
 
 const HIGH_PRIORITY = 'high'
 

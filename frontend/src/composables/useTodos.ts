@@ -40,6 +40,10 @@ export default function useTodos() {
 
   const editTodo = async (form: TTodo) => {
     await updateTodo(form._id, form);
+    const index = todos.value.findIndex((todo) => todo._id === form._id);
+    if (index !== -1) {
+      todos.value[index] = form;
+    }
     updateFilteredLists();
   };
 

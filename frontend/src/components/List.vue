@@ -12,8 +12,8 @@
 <script setup lang="ts">
 import draggable from 'vuedraggable';
 import Card from './UI/Card.vue';
-import { TTodo } from '../types/todo';
-import useTodoActions from '../composables/useTodoActions';
+import { TTodo } from '@/types/todo';
+import useTodoActions from '@/composables/useTodoActions';
 
 const props = defineProps<{
     title: string;

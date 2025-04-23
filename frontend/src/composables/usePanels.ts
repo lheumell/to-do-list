@@ -1,5 +1,5 @@
-import { ref } from 'vue';
-import type { TTodo } from '../types/todo';
+import { ref } from "vue";
+import type { TTodo } from "../types/todo";
 
 export default function usePanels() {
   const isOpenCreatePanel = ref(false);
