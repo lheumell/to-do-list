@@ -6,7 +6,7 @@
         <h3 class="font-bold text-md mb-2">{{ todo.title }}</h3>
         <div class="flex items-center justify-between">
             <p class="text-slate-50 text-sm italic truncate">{{ todo.description }}</p>
-            <div v-if="todo.priority === 'high'" class=" h-4 w-4 bg-red-500"></div>
+            <div v-if="todo.priority === HIGH_PRIORITY" class=" h-4 w-4 bg-red-500"></div>
         </div>
 
 
@@ -15,6 +15,8 @@
 
 <script setup lang="ts">
 import { TTodo } from '../../types/todo'
+
+const HIGH_PRIORITY = 'high'
 
 const props = defineProps<{
     todo: TTodo;

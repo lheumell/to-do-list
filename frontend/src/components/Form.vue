@@ -58,7 +58,7 @@ const form: TFormType = reactive(props.todo || {
     title: '',
     description: '',
     status: 'todo',
-    priority: 'low',
+    priority: 'medium',
 });
 
 

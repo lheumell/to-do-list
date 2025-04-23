@@ -20,14 +20,12 @@ import { onClickOutside } from '@vueuse/core'
 
 const panelRef = ref()
 
-
-
-const props = defineProps<{
+defineProps<{
   title: string;
   isOpen: boolean;
 }>();
 
-onClickOutside(panelRef, event => handleClose())
+onClickOutside(panelRef, _ => handleClose())
 
 const emit = defineEmits<{
   (e: 'onClose'): void;

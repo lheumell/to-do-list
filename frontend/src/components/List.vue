@@ -26,6 +26,5 @@ const emit = defineEmits<{
     (e: 'open', id: string): void;
 }>();
 
-// Utilisation du composable pour les actions sur les tâches
 const { detectMove, handleDelete, emitOpen } = useTodoActions(props, emit);
 </script>
