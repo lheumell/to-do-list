@@ -54,3 +54,11 @@ This is a simple to-do list application designed to help users manage their task
    ```bash
    sudo docker exec -it mongodb mongosh -u root -p rootpass --authenticationDatabase admin
    ```
+
+OU
+
+# Lancer le projet
+
+```bash
+docker-compose up --build
+```

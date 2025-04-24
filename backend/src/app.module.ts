@@ -6,7 +6,7 @@ import { TodoModule } from './todo/todo.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://root:rootpass@localhost:27017', {
+    MongooseModule.forRoot('mongodb://root:rootpass@mongodb:27017', {
       authSource: 'admin',
       dbName: 'test',
     }),

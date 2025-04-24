@@ -12,6 +12,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
     "@vueuse/core": "^13.1.0",
+    "axios": "^1.8.4",
     "tailwindcss": "^4.1.4",
     "vuedraggable": "^4.1.0"
   },
