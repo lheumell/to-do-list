@@ -2,11 +2,11 @@
     <div draggable="true"
         class="relative border border-slate-50 rounded-md p-4 m-4 bg-slate-900 hover:bg-slate-800 transition-all duration-200 ease-in-out cursor-pointer"
         @click="emitOpen">
-        <button class="absolute top-2 right-2 cursor-pointer" @click.stop="emitDelete">✖</button>
+        <button class="absolute top-2 right-2 cursor-pointer" aria-label="delete" @click.stop="emitDelete">✖</button>
         <h3 class="font-bold text-md mb-2">{{ todo.title }}</h3>
         <div class="flex items-center justify-between">
             <p class="text-slate-50 text-sm italic truncate">{{ todo.description }}</p>
-            <div v-if="todo.priority === HIGH_PRIORITY" class=" h-4 w-4 bg-red-500"></div>
+            <div v-if="todo.priority === HIGH_PRIORITY" class=" h-4 w-4 bg-red-500" aria-label="high-priority"></div>
         </div>
 
 
